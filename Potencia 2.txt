@@ -1,0 +1,44 @@
+package javaapplication2;
+import java.util.*;
+
+public class JavaApplication2 {
+    public static void main(String[] args) {
+        
+        int N;
+        System.out.println("Defina tamaño del arreglo");
+        Scanner teclado=new Scanner (System.in);
+        N=teclado.nextInt();
+        int[]B1=Base(N);
+        int[]E1=Exponente(N);
+        int[]P1=Potencia(B1,E1);
+        for (int i=0;i<N;i++){
+        System.out.println("La base:"+B1[i]+",elevado:"+E1[i]+",es igual a:"+P1[i]);
+        }
+    }
+     public static int[]Base(int N) {
+         int B[]=new int[N];
+       for(int i=0;i<N;i++){
+           System.out.println("Ingrese las bases para la posicion:"+i);
+         Scanner teclado=new Scanner (System.in);
+        B[i]=teclado.nextInt();
+     }  
+       return(B);
+    }
+    public static int[]Exponente(int N) {
+         int E[]=new int[N];
+       for(int i=0;i<N;i++){
+           System.out.println("Ingrese los exponentes para la posicion:"+i);
+         Scanner teclado=new Scanner (System.in);
+        E[i]=teclado.nextInt();
+     }  
+       return(E);
+    }
+    public static int[]Potencia(int[] E1,int [] B1) {
+        int P[]=new int[B1.length];
+       for(int i=0;i<B1.length;i++){
+        P[i]=(int) Math.pow(B1[i],E1[i]);  
+     }  
+       return(P);
+     }  
+      
+    }

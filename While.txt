@@ -1,0 +1,35 @@
+import java.util.*;
+public class EL_KOKO{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("DIGITE UN VALOR ENTERO");
+        int SS=sc.nextInt();
+        int KS=SS*2-1;
+        int TT=SS;
+        int RR=SS;
+        int i=0;
+        while (i<SS){
+            int qq=1;
+            String HH="--";
+            int j=0;
+            while (j<=KS){
+                if ((j<TT)||(j>RR)){
+                    HH+=" ";
+                }else {
+                    if(j<SS){
+                        HH+=qq;
+                        qq++;
+                    }else{
+                        HH+=qq;
+                        qq--;
+                    }
+                }
+                j++;
+            }
+            System.out.println(HH);
+            RR++;
+            TT--;
+            i++;
+        }
+    }
+}
